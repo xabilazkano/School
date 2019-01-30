@@ -121,6 +121,7 @@ public class Interface {
 					System.out.println("5.- Check if he/she is tutor");
 					System.out.println("6.- Add a subject");
 					System.out.println("7.- Delete a subject");
+					System.out.println("8.- Get students by tutor");
 
 					if (sc.hasNextInt()) {
 						switch (sc.nextInt()) {
@@ -246,6 +247,12 @@ public class Interface {
 							else
 								System.out.println("Teacher not found");
 							break;
+							
+						case 8:
+							System.out.println("Name of the teacher");
+							sc.nextLine();
+							name = sc.nextLine();
+							school.getStudentsByTutor(name);
 
 						}
 
