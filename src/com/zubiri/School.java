@@ -233,30 +233,6 @@ public class School {
 		return administratives.get(index);
 	}
 
-	/**
-	 * Prints the list of students of a tutor
-	 * @param name
-	 */
-	public void getStudentsByTutor(String name) {
-		boolean check = false;
-		if (findTeacherID(name) != -1) {
-			String classroom = getTeacher(name).getTutor();
-			if (!classroom.equals("no") && !classroom.equals("")) {
-				for (int i = 0; i < students.size(); i++) {
-					if (students.get(i).getClassroom().equals(classroom)) {
-						System.out.println(students.get(i).getName());
-						check = true;
-					}
-				}
-				if (check=false)
-				System.out.println("Students not found");
-			} else {
-				System.out.println("This teacher is not tutor");
-			}
-		}
-		else {
-			System.out.println("Teacher not found");
-		}
-	}
+
 
 }
